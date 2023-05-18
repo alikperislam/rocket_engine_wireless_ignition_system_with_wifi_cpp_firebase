@@ -18,11 +18,11 @@
 #include "addons/RTDBHelper.h"
 
 // Insert your network credentials
-#define WIFI_SSID "OPPO A72"
-#define WIFI_PASSWORD "12341234"
+#define WIFI_SSID "your_wifi_id"
+#define WIFI_PASSWORD "your_wifi_password"
 
 // Insert Firebase project API Key
-#define API_KEY "AIzaSyC-ROwxI59vsAAUFqqAL6eh1rvsTeba_FE"
+#define API_KEY "your_firebase_api_key"
 
 // Insert RTDB URLefine the RTDB URL */
 #define DATABASE_URL "https://esp32rocketengine-default-rtdb.europe-west1.firebasedatabase.app/" 
