@@ -12,22 +12,16 @@
 #define buzzer 22
 // ------------------------ ateşleme sistemi
 
-//Provide the token generation process info.
 #include "addons/TokenHelper.h"
-//Provide the RTDB payload printing info and other helper functions.
 #include "addons/RTDBHelper.h"
 
-// Insert your network credentials
 #define WIFI_SSID "your_wifi_id"
 #define WIFI_PASSWORD "your_wifi_password"
 
-// Insert Firebase project API Key
 #define API_KEY "your_firebase_api_key"
 
-// Insert RTDB URLefine the RTDB URL */
 #define DATABASE_URL "your_firebase_url" 
 
-//Define Firebase Data object
 FirebaseData fbdo;
 
 FirebaseAuth auth;
@@ -59,13 +53,10 @@ void setup(){
   Serial.println(WiFi.localIP());
   Serial.println();
 
-  /* Assign the api key (required) */
   config.api_key = API_KEY;
 
-  /* Assign the RTDB URL (required) */
   config.database_url = DATABASE_URL;
 
-  /* Sign up */
   if (Firebase.signUp(&config, &auth, "", "")){
     Serial.println("ok");
     signupOK = true;
@@ -74,7 +65,7 @@ void setup(){
     Serial.printf("%s\n", config.signer.signupError.message.c_str());
   }
 
-  config.token_status_callback = tokenStatusCallback; //see addons/TokenHelper.h
+  config.token_status_callback = tokenStatusCallback; 
   
   Firebase.begin(&config, &auth);
   Firebase.reconnectWiFi(true);
