@@ -25,7 +25,7 @@
 #define API_KEY "your_firebase_api_key"
 
 // Insert RTDB URLefine the RTDB URL */
-#define DATABASE_URL "https://esp32rocketengine-default-rtdb.europe-west1.firebasedatabase.app/" 
+#define DATABASE_URL "your_firebase_url" 
 
 //Define Firebase Data object
 FirebaseData fbdo;
